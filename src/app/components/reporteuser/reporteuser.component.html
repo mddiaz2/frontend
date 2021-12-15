@@ -1,0 +1,449 @@
+<app-header></app-header>
+ <!-- ======= Breadcrumbs ======= -->
+ <section class="breadcrumbs">
+  <div class="container">
+
+    <ol>
+      <li><a>Reporte Usuario</a></li>
+    </ol>
+  </div>
+</section><!-- End Breadcrumbs -->
+<section id="services" class="services">
+<div class="d-flex flex-column titulore">
+  <header class="section-header">
+    <h2>Conclusiones</h2>
+  </header>
+  <div class="row gy-4">
+    <p>Gracias por participar en la Evaluación del nivel de Transformación Digital de METDIES. A continuación, se
+      presentan los resultados obtenidos y las sugerencias propuestas en base a su nivel calculado:</p>
+  </div>
+
+</div>
+<div class="container gridreporte">
+  <div class="reradio">
+    <div id="headrad">
+      <h6><strong>Reporte General</strong></h6>
+    </div>
+    <div id="bodyrad">
+      <div id="red"></div>
+
+    </div>
+  </div>
+  <div class="rereco">
+    <div id="headrad">
+      <h6><strong>Promedio Total Calculado</strong></h6>
+    </div>
+    <div class="d-flex justify-content-center rf1">
+      <h6><strong>{{this.valorTotal}}</strong> </h6>
+    </div><br>
+
+    <!-- nivel del reporte general -->
+    <div [ngSwitch]="valorTotal">
+
+      <div *ngSwitchCase="'5'">
+        <div id="headrad">
+          <h6><strong>Nivel Total Correspondiente</strong></h6>
+        </div>
+        <div id="bodyrec">
+          <div class="d-flex justify-content-center rf1">
+            <h6><strong>{{Nivel[4]}}</strong> </h6>
+          </div>
+
+        </div><br>
+      </div>
+      <div *ngSwitchCase="'4'">
+        <div id="headrad">
+          <h6><strong>Nivel Total Correspondiente</strong></h6>
+        </div>
+        <div id="bodyrec">
+          <div class="d-flex justify-content-center rf1">
+            <h6><strong>{{Nivel[3]}}</strong> </h6>
+          </div>
+
+        </div><br>
+      </div>
+      <div *ngSwitchCase="'3'">
+        <div id="headrad">
+          <h6><strong>Nivel Total Correspondiente</strong></h6>
+        </div>
+        <div id="bodyrec">
+          <div class="d-flex justify-content-center rf1">
+            <h6><strong>{{Nivel[2]}}</strong> </h6>
+          </div>
+
+        </div><br>
+      </div>
+      <div *ngSwitchCase="'2'">
+        <div id="headrad">
+          <h6><strong>Nivel Total Correspondiente</strong></h6>
+        </div>
+        <div id="bodyrec">
+          <div class="d-flex justify-content-center rf1">
+            <h6><strong>{{Nivel[1]}}</strong> </h6>
+          </div>
+
+        </div><br>
+      </div>
+      <div *ngSwitchCase="'1'">
+        <div id="headrad">
+          <h6><strong>Nivel Total Correspondiente</strong></h6>
+        </div>
+        <div id="bodyrec">
+          <div class="d-flex justify-content-center rf1">
+            <h6><strong>{{Nivel[0]}}</strong> </h6>
+          </div>
+
+        </div><br>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="p-2 c1 red"><h4><strong>Reporte por Dimensiones</strong></h4></div>
+
+<div class="container reposub">
+  <div class="row">
+    <div class="col">
+
+      <!-- reporte total de las dimensiones -->
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#dinamismo_estrategico" role="tab"
+            aria-controls="dinamismo_estrategico" aria-selected="true">Dinamismo Estratégico</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#centrado_en_el_cliente" role="tab"
+            aria-controls="centrado_en_el_cliente" aria-selected="false">Centrado en el Cliente</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#cultura_digital_T_H" role="tab"
+            aria-controls="cultura_digital_T_H" aria-selected="false">Cultura Digital T&H</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#innovacion_y_entrega_ajustada" role="tab"
+            aria-controls="innovacion_y_entrega_ajustada" aria-selected="false">Innovación y Entrega Ajustada</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#liderazgo_en_tecnologia" role="tab"
+            aria-controls="liderazgo_en_tecnologia" aria-selected="false">Liderazgo en Tecnología</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#innovacion_educativa" role="tab"
+            aria-controls="innovacion_educativa" aria-selected="false">Innovacion Educativa</a>
+        </li>
+
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+
+
+        <div class="tab-pane fade show active dona1" id="dinamismo_estrategico" role="tabpanel"
+          aria-labelledby="dinamismo_estrategico">
+          <div id="headrad">
+            <h6><strong>Porcentaje Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona1"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{dinamismo_estrategico.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{dinamismo_estrategico.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+
+                  <div *ngFor='let item of recomendacion1;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="centrado_en_el_cliente" role="tabpanel" aria-labelledby="centrado_en_el_cliente">
+          <div id="headrad">
+            <h6><strong>Porcentaje Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona2"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{centrado_en_el_cliente.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{centrado_en_el_cliente.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+        
+                  <div *ngFor='let item of recomendacion2;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="cultura_digital_T_H" role="tabpanel" aria-labelledby="cultura_digital_T_H">
+          <div id="headrad">
+            <h6><strong>Porcentaje Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona3"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{cultura_digital_T_H.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{cultura_digital_T_H.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+        
+                  <div *ngFor='let item of recomendacion3;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="innovacion_y_entrega_ajustada" role="tabpanel"
+          aria-labelledby="innovacion_y_entrega_ajustada">
+          <div id="headrad">
+            <h6><strong>Porcentaje Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona4"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{innovacion_y_Entrega_Ajustada.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{innovacion_y_Entrega_Ajustada.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+        
+                  <div *ngFor='let item of recomendacion4;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="liderazgo_en_tecnologia" role="tabpanel"
+          aria-labelledby="liderazgo_en_tecnologia">
+          <div id="headrad">
+            <h6><strong>Porcentaje Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona5"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{liderazgo_tecnologico.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{liderazgo_tecnologico.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+        
+                  <div *ngFor='let item of recomendacion5;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="innovacion_educativa" role="tabpanel" aria-labelledby="innovacion_educativa">
+          <div id="headrad">
+            <h6><strong>Promedio Dimensión Calculado</strong></h6>
+          </div>
+          <div id="dona6"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="d-flex flex-column">
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Promedio Dimensión Calculado</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{innovacion_educativa.valor}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div id="headrad">
+                      <h6><strong>Nivel Correspondiente</strong></h6>
+                    </div>
+                    <div id="bodyrad">
+                      <div class="d-flex justify-content-center rf1">
+                        <h6><strong>{{innovacion_educativa.nivel}}</strong> </h6>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-sm">
+                <div id="headrad" class="headrec">
+                  <h6><strong>Recomendaciones</strong></h6>
+                </div>
+                <div id="bodyrec">
+        
+                  <div *ngFor='let item of recomendacion6;let i = index'>
+                    <ul class="list-group">
+                      <li class="list-group-item lisrec">{{item}}</li>
+                    </ul>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

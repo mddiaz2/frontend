@@ -1,0 +1,88 @@
+<app-header></app-header>
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <ol>
+      <li>Menu Principal</li>
+    </ol>
+  </div>
+</section><!-- End Breadcrumbs -->
+<section id="services2" class="services">
+
+  <div [ngSwitch]="condicion">
+
+    <div *ngSwitchCase="'1'">
+      <div id="reporte">
+
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="men">Usted completo correctamente todas las dimensiones. Para generar el reporte seleccione el boton "Generar Reporte"</p>
+
+      </div><br>
+      <div class="d-flex justify-content-center">
+
+        <button type="button" class="btn btn-primary" (click)="onclick('repouser')">Generar Reporte</button>
+    
+        
+      </div>
+    </div>
+
+
+
+    <div *ngSwitchCase="'2'">
+      <div class="container">
+        <header class="section-header">
+          <h2>Bienvenido:</h2><br>
+          <h5 class="bienv">{{this.session.nombre}}</h5>
+          <p class="sel">Seleccione la Dimensión a Evaluar</p>
+        </header>
+        <div class="row">
+          <div class="row">
+
+          </div>
+          <div class="container2">
+            <div class="d-flex p-2 ins">
+              <div class="row">
+                <p class="menp">
+                  A continuación, se presentan las 6 dimensiones a ser evaluadas. Puede seleccionar la dimensión con la
+                  que desee comenzar la evaluación. Sin embargo, es indispensable que resuelva todas las dimensiones. Gracias por
+                  su participación.
+                </p>
+              </div>
+            </div>
+            <div class="row menun">
+              <div class="col-sm">
+                <div class="list-group list-group-flush" id="list-tab" role="tablist">
+
+                  <div #myDiv *ngFor='let item of dimensiones;let i = index'>
+        
+                    <a class="list-group-item list-group-item-action active" id="list-{{item.i}}-list"
+                      data-toggle="list" href="#list-{{item.i}}" role="tab" aria-controls='1'>{{item.nombre}}</a>
+                    <br>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="tab-content menub" id="nav-tabContent">
+                  <div *ngFor='let item of dimensiones;let i = index'>
+                    <div class="tab-pane fade in show active botonmenu" id="list-{{item.i}}" role="tabpanel"
+                      aria-labelledby="list-1-list">
+                      <button type="button" class="btn btn-primary" (click)="onclick(item)">Evaluar</button>
+                    </div>
+                    <br>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

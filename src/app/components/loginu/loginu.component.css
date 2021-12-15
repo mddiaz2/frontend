@@ -1,0 +1,43 @@
+/* #menu{
+    color: red;
+    background-color: black;
+
+} */
+
+.mat-tab-label {
+    /* min-width: 25px !important;
+    padding: 5px; */
+    background-color: transparent;
+    color: rgba(14, 62, 150, 0.897);
+    font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    /* min-width: 25px !important;
+    padding: 5px; */
+    background-color: transparent;
+    color: rgba(14, 62, 150, 0.897);
+    font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: green;
+}
+.lare{
+    margin-top: 13px;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #000450;
+}
+.container2{
+    width: 1000px;
+    margin: 366px auto;
+    background-color: #ffff;
+    padding: 50px 40px;
+    overflow: hidden;
+    box-shadow: 0 0 3px 1px #00000078;
+    margin-top: 12px;
+    height: 499px;
+}

@@ -1,0 +1,7 @@
+footer{
+    margin-top: 10em;
+}
+.fot{
+    display: flex !important;
+    flex-direction: column;
+}

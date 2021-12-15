@@ -1,0 +1,61 @@
+<app-header></app-header>
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a>Dimensión: {{titulo}}</a></li>
+    </ol>
+
+  </div>
+
+</section><!-- End Breadcrumbs -->
+<section id="services" class="services">
+
+  <header class="section-header">
+    <h2>Escala de Valoración</h2>
+    <div class="col-lg-6">
+      <img src="assets/img/escala.png" class="img-fluid3" alt="escala">
+    </div>
+  </header>
+  <div class="row gy-4">
+    <div class="d-flex p-2 texp">
+      <p>A continuación, se presentan las preguntas asignadas para evaluar el nivel de Transformación Digital
+        de la presente dimensión. Conteste cada pregunta en base a la escala de valoración presentada.
+      </p>
+    </div>
+  </div>
+
+  <div id="content">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Pregunta </th>
+        <td mat-cell *matCellDef="let element"> {{element.pregunta}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="respuesta">
+        <th mat-header-cell *matHeaderCellDef>Seleccione Respuesta </th>
+        <td mat-cell *matCellDef="let element">
+
+          <select class="selec" (change)="onChange($event,element)">
+            <option *ngFor="let i of lista">{{i}}</option>
+          </select>
+        </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5]">
+    </mat-paginator>
+  </div>
+
+
+
+  <div id="guardar" class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary" (click)="guardar()">Guardar Respuestas</button>
+  </div>
+
+</section>

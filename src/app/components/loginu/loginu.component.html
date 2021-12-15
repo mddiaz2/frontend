@@ -1,0 +1,93 @@
+ <app-header></app-header>
+ <!-- ======= Breadcrumbs ======= -->
+ <section class="breadcrumbs">
+   <div class="container">
+
+     <ol>
+       <li><a>Inicio</a></li>
+       <li>Login Usuario</li>
+     </ol>
+   </div>
+ </section><!-- End Breadcrumbs -->
+ <section class="inner-page">
+   <div class="container">
+     <div class="wrapper">
+       <mat-tab-group>
+         <!-- login -->
+         <mat-tab label="Login">
+           <div class="form-container">
+             <div class="form-inner">
+               <form (ngSubmit)="login(f)" #f="ngForm" novalidate>
+                 <label class="lare" for="exampleInputEmail1">Email:
+                   <div class="field">
+                     <input type="email" class="form-control" placeholder="name@example.com" name="email" ngModel
+                       required #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                   </div>
+                 </label>
+                 <br>
+                 <label>Password:
+                   <div class="field">
+                     <input type="password" class="form-control" placeholder="Password" name="password" ngModel required
+                       #password="ngModel" />
+                   </div>
+                 </label>
+                 <br>
+                 <div class="field btn">
+
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="Enviar" name="insertar">
+                 </div>
+               </form>
+             </div>
+           </div>
+
+         </mat-tab>
+         <!-- registro -->
+         <mat-tab label="Registro">
+           <div class="form-container">
+            <div class="form-inner">
+             <form (ngSubmit)="registro(g)" #g="ngForm" novalidate>
+               <label class="lare">Nombre:
+                <div class="field">
+                 <input type="text" class="form-control" placeholder="Nombre" name="nombre" ngModel required
+                   #nombre="ngModel" />
+                </div>
+               </label>
+               <br>
+               <label for="exampleInputEmail1">Email:
+                <div class="field">
+                 <input type="email" class="form-control" placeholder="name@example.com" name="email" ngModel required
+                   #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                </div>
+               </label>
+               <br>
+               <label>Seleccione el Nivel de Educación:
+                 <br>
+                 <select class="form-select form-control-lg" name="niveleducacion" ngModel required
+                   #niveleducacion="ngModel">
+                   <option *ngFor="let state of lista" [ngValue]="state">
+                     {{ state }}
+                   </option>
+                 </select>
+               </label>
+               <br>
+               <label>Password:
+                <div class="field">
+                 <input type="password" class="form-control" placeholder="password" name="password" ngModel required
+                   #password="ngModel" />
+                </div>
+               </label>
+               <br>
+               <div class="field btn">
+
+                 <div class="btn-layer"></div>
+                 <input type="submit" value="Registrar" name="insertar">
+               </div>
+             </form>
+            </div>
+           </div>
+         </mat-tab>
+       </mat-tab-group>
+     </div>
+   </div>
+ </section>

@@ -1,0 +1,42 @@
+<div [ngSwitch]="estado">
+
+  <!-- <div  *ngSwitchDefault> 
+    <h1 mat-dialog-title>Formulario invalido</h1>
+    <div mat-dialog-content>por favor llene el formulario correctamente</div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div> -->
+  <div  *ngSwitchCase="'1'"> 
+    <h1 mat-dialog-title>Formulario Inválido</h1>
+    <div mat-dialog-content>Por favor, llene el formulario correctamente</div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'2'">
+    <h1 mat-dialog-title>Credenciales incorrectas</h1>
+    <div mat-dialog-content>Por favor,  ingrese sus credenciales correctamente</div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'3'">
+    <h1 mat-dialog-title>Registro exitoso</h1>
+    <div mat-dialog-content>Puede ingresar la sistema</div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'4'">
+    <h1 mat-dialog-title>Cuestionario no valido</h1>
+    <div mat-dialog-content>Por favor,  ingrese un valor mayor a 0 en cada pregunta</div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cerrar</button>
+    </div>
+  </div>
+  
+</div>

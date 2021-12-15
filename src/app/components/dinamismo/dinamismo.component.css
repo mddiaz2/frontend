@@ -1,0 +1,53 @@
+#guardar{
+    margin-top: 4em;
+    margin-right: 8em;
+}
+
+#content{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+table {
+    width: 100%;
+    background: #fafbfd;
+    background-size: cover;
+  
+  }
+
+h1{
+    margin-left: 1.7em;
+    color: black;
+}
+
+.mat-row {
+    height: auto;
+    color: black;
+  }
+  .mat-header-cell{
+    color: black;
+   font-size: large;
+  }
+  .mat-cell {
+    padding: 32px 32px 32px 0;
+    color: black;
+    font-size: medium;
+  }
+  .img-fluid3 {
+    height: 116px;
+    width: 821px;
+    display: block;
+    margin-left: 328px;
+    margin-right: auto;
+}
+  
+.texp{
+
+  margin-top: -17px;
+  margin-left: 57px;
+  margin-bottom: 11px;
+}
+.selec{
+  width: 53px;
+  height: 32px;
+}

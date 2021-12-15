@@ -1,0 +1,12 @@
+#navbar2{
+    position: initial;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin-left: 951px;
+}
+.cer{
+    color: white;
+}
